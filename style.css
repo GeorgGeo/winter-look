@@ -1,0 +1,187 @@
+@import './reset.css';
+@import './media.css';
+:root {
+  --main-color: #001AC2;
+  --black: #202020;
+  --light-black: #383838;
+  --text-color: #F3FCFF;
+  --max-width: 120rem;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+
+  /* typography */
+  
+  --big-fz: calc(30px + (75 - 60) * ((100vw - 300px) / (1200 - 300)));
+  --medium-fz: calc(18px + (35 - 18) * ((100vw - 300px) / (1200 - 300)));
+  --small-fz: calc(15px + (18 - 15) * ((100vw - 300px) / (1200 - 300)));
+}
+
+/* Common styles */
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+/*  */
+.btn-check.disabled {
+  cursor: not-allowed;
+}
+
+.btn-check:not(.disabled) {
+  background-color: #4CAF50;
+  cursor: default;
+}
+/*  */
+/* Стили для неактивных кнопок */
+.btn-select.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Стили для выбранной кнопки */
+.btn-select.selected {
+  background-color: #4CAF50;
+  cursor: default;
+}
+/*  */
+.button:hover {
+  box-shadow: 0 1rem 2rem var(--main-color);
+  transform: translateY(-5px) scale(1.05) rotateX(7deg);
+}
+.button:focus {
+  box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
+}
+.button:active {
+  background-color: #c200bc;
+}
+/* #region header */
+.header {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-bg {
+  background-image: url('./image/background.png');
+  background-size: contain;
+  background-size: 100% 100%;
+  background-position: top center;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 1440px;
+  max-width: 100%;
+  /* height: 600px; */
+  height: auto;
+  min-height: 600px;
+  aspect-ratio: 1440 / 900;
+}
+.header-fixed {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1380px;
+  max-width: 95%;
+  height: 80px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 9;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.logo {
+  margin-right: auto;
+}
+.text-selected {
+  padding-right: 35px;
+}
+.btn-check {
+  background-color: #8C8C8C;
+  border-radius: 10px;
+}
+.title {
+  font-size: 34px;
+  padding-bottom: 30px;
+}
+.title-about {
+  padding-bottom: 30px;
+}
+.btn-start {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  padding: 12px 45px;
+}
+/* #endregion header */
+/* #region main */
+.main {
+  max-width: 1440px;
+  margin: auto;
+  background-color: rgba(243, 252, 255, 1);
+}
+.step-one, .step-two, .step-three {
+  padding-top: 50px;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.step-two {
+  background-color: rgba(255, 255, 255, 1);
+}
+.step-title {
+  font-size: 32px;
+  line-height: 1.2;
+  padding-bottom: 30px;
+}
+.step-about {
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-bottom: 35px;
+}
+/*  */
+.cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.card {
+  min-width: 300px;
+  background-color: rgba(246, 246, 246, 1);
+  border: 1px solid rgba(226, 226, 226, 1)
+}
+.card-img {
+  min-height: 260px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 15px;
+  border: 1px solid rgba(226, 226, 226, 1)
+}
+.card-img__helmet {
+  padding: 46px 15px;
+}
+.card-title {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.card-price {
+  font-size: 16px;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+.btn-select {
+  padding: 10px 43px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+/* #endregion main */
