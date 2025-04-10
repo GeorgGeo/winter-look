@@ -114,9 +114,11 @@
 .title {
   font-size: 34px;
   padding-bottom: 30px;
+  text-align: center;
 }
 .title-about {
   padding-bottom: 30px;
+  text-align: center;
 }
 .btn-start {
   display: flex;
